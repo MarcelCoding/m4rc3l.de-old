@@ -1,0 +1,85 @@
+@import "variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 0 $cube * 40;
+
+  main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $cube * 1000;
+
+    section {
+      height: 100vh;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      .avatar {
+        border-radius: 50%;
+        box-shadow: $box-shadow;
+        height: $cube * 180;
+        width: $cube * 180;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: $cube * 40;
+
+        .line {
+          text-shadow: $text-shadow;
+        }
+
+        .first-line {
+          font-size: $cube * 30;
+        }
+
+        .second-line {
+          font-size: $cube * 70;
+        }
+      }
+
+      .social-media {
+        display: flex;
+        align-items: center;
+        margin-top: $cube * 10;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: $cube * 30;
+          height: $cube * 30;
+
+          &:not(:first-child) {
+            margin-left: $cube * 30;
+          }
+
+          svg {
+            fill: $primary-text-color;
+            transition: fill $transition;
+          }
+
+          &:hover svg {
+            fill: $primary-light;
+          }
+        }
+      }
+
+      .description {
+        text-align: center;
+        margin-top: $cube * 30;
+        font-size: $text-font-size;
+        line-height: 1.5;
+      }
+    }
+  }
+}

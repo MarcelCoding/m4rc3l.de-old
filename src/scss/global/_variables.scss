@@ -1,0 +1,30 @@
+$cube: 0.0625rem;
+$font-family: 'Roboto Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+$primary: #FF6419;
+$primary-light: lighten($primary, 10%);
+$primary-dark: darken($primary, 10%);
+
+$secondary: #242939;
+$secondary-light: lighten($secondary, 10%);
+$secondary-dark: darken($secondary, 10%);
+
+$white: #E9EFF6;
+$white-light: #ffffff;
+$white-dark: darken($white, 10%);
+
+$black: #2f3343;
+$black-light: lighten(#2f3343, 10%);
+$black-dark: darken(#2f3343, 10%);
+
+$transition: 250ms;
+$box-shadow: 0 0 $cube * 20 0 rgba(0, 0, 0, 0.5);
+$text-shadow: 0 0 $cube * 10 rgba(0, 0, 0, 0.25);
+
+$normal-font-wight: 400;
+$bold-font-wight: 400;
+
+$text-font-size: $cube * 18;
+
+$primary-text-color: $white-light;
+$secondary-text-color: $black;

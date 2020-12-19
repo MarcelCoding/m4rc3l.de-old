@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+html {
+  color: $primary-text-color;
+  background-color: $secondary;
+
+  noscript {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: $text-font-size * 2.5;
+    }
+
+    p {
+      margin-top: $cube * 20;
+      font-size: $text-font-size;
+      text-align: center;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  scrollbar-width: thin;
+  font-family: $font-family;
+}
+
+a:not(.not) {
+  display: inline-block;
+  text-decoration: none;
+
+  &::after {
+    display: block;
+    content: '';
+    height: $cube * 2;
+    width: 0;
+    background-image: linear-gradient(45deg, $primary-dark, $primary-light, $primary-light);
+    transition: width $transition;
+    bottom: 0;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &.active::after {
+    width: 100%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-weight: $bold-font-wight;
+}
+
+.highlight, a {
+  background-image: linear-gradient(45deg, $primary-dark, $primary-light, $primary-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
