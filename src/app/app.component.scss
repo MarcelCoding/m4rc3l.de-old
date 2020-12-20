@@ -3,7 +3,7 @@
 :host {
   display: flex;
   flex-direction: column;
-  padding: 0 $cube * 40;
+  padding: 0 $cube * 20;
 
   main {
     margin: 0 auto;
@@ -11,7 +11,8 @@
     max-width: $cube * 1000;
 
     section {
-      height: 100vh;
+      min-height: calc(100vh - #{$cube * 40});
+      padding: $cube * 20 0;
     }
 
     .title {
@@ -19,7 +20,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
 
       .avatar {
         border-radius: 50%;
@@ -44,6 +44,11 @@
 
         .second-line {
           font-size: $cube * 70;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
         }
       }
 
