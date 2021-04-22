@@ -1,5 +1,5 @@
 $cube: 0.0625rem;
-$font-family: 'Roboto Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$fallback-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 $primary: #FF6419;
 $primary-light: lighten($primary, 10%);

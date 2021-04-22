@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "variables";
 
+@import "~@fontsource/roboto-mono/400.css";
+@import "~@fontsource/roboto-mono/500.css";
+
+@import "~@fontsource/roboto-mono/variable.css"; // Contains ONLY variable weights and no other axes.
+//@import "~@fontsource/roboto-mono/variable-italic.css"; // Italic variant.
+
 html {
   color: $primary-text-color;
   background-color: $secondary;
@@ -30,7 +36,15 @@ html {
   padding: 0;
   user-select: none;
   scrollbar-width: thin;
-  font-family: $font-family;
+  font-family: "Roboto Mono", $fallback-font-family;
+  font-weight: 400;
+}
+
+@supports (font-variation-settings: normal) {
+  * {
+    font-family: "Roboto MonoVariable", $fallback-font-family;
+    font-variation-settings: "wght" 400;
+  }
 }
 
 a:not(.not) {
@@ -57,7 +71,15 @@ a:not(.not) {
 }
 
 h1, h2, h3, h4, h5, h6, strong, b {
-  font-weight: $bold-font-wight;
+  font-family: "Roboto Mono", $fallback-font-family;
+  font-weight: 500;
+}
+
+@supports (font-variation-settings: normal) {
+  h1, h2, h3, h4, h5, h6, strong, b {
+    font-family: "Roboto MonoVariable", $fallback-font-family;
+    font-variation-settings: "wght" 500;
+  }
 }
 
 .highlight, a {
