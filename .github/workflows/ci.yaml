@@ -73,23 +73,23 @@ jobs:
           name: MarcelCoding
           path: dist
 
-  deploy:
-    needs: [ build ]
-    runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
+#  deploy:
+#    needs: [ build ]
+#    runs-on: ubuntu-latest
+#    if: github.event_name != 'pull_request'
 
-    steps:
-      - uses: actions/checkout@v2
+#    steps:
+#      - uses: actions/checkout@v2
 
-      - uses: actions/download-artifact@v2
-        with:
-          name: MarcelCoding
-          path: dist
+#      - uses: actions/download-artifact@v2
+#        with:
+#          name: MarcelCoding
+#          path: dist
 
-      - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Deploy
+#        uses: crazy-max/ghaction-github-pages@v2
+#        with:
+#          target_branch: gh-pages
+#          build_dir: dist
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
