@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 :host {
   display: flex;
@@ -6,9 +6,9 @@
   padding: 0 $cube * 20;
 
   main {
-    margin: 0 auto;
     width: 100%;
     max-width: $cube * 1000;
+    margin: 0 auto;
 
     section {
       min-height: calc(100vh - #{$cube * 40});
@@ -18,21 +18,21 @@
     .title {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
 
       .avatar {
+        width: $cube * 180;
+        height: $cube * 180;
         border-radius: 50%;
         box-shadow: $box-shadow;
-        height: $cube * 180;
-        width: $cube * 180;
       }
 
       .text {
         display: flex;
         flex-direction: column;
-        text-align: center;
         margin-top: $cube * 40;
+        text-align: center;
 
         .line {
           text-shadow: $text-shadow;
@@ -54,10 +54,10 @@
 
         a {
           display: flex;
-          justify-content: center;
-          align-items: center;
           width: $cube * 30;
           height: $cube * 30;
+          align-items: center;
+          justify-content: center;
 
           &:not(:first-child) {
             margin-left: $cube * 30;
@@ -75,10 +75,10 @@
       }
 
       .description {
-        text-align: center;
         margin-top: $cube * 30;
         font-size: $text-font-size;
         line-height: 1.5;
+        text-align: center;
       }
     }
   }
